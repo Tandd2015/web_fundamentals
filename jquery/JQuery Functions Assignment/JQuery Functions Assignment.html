@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery Functions Assignment</title>
+        <meta charset="UTF-8">
+        <meta name="JQuery Functions Assignment" content="This is a JavaScript Assignment for the Coding Dojo. It is an wireframe of JQuery Functions to start my introduction to JQuery itself.">
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                $('.click').click(function(){
+                    alert('WoOoO')
+                });
+                
+                $('.hide').click(function(){
+                    $(".hide").hide()
+                });
+                
+                $('.show').click(function(){
+                    $(".hide").show()
+                });
+                
+                $('.toggle').click(function(){
+                    $(".hide").toggle()
+                });
+                
+                $('.slideDown').click(function(){
+                    $(".hidden").slideDown()
+                });
+                
+                $('.slideUp').click(function(){
+                    $("#slideUp").slideUp()
+                });
+                
+                $('.slideToggle').click(function(){
+                    $("#slideToggle").slideToggle()
+                });
+                
+                $('.fadeIn').click(function(){
+                    $("#fadeIn").fadeIn()
+                });
+                
+                $('.fadeOut').click(function(){
+                    $("#fadeOut").fadeOut()
+                });
+                
+                $('.addClass').click(function(){
+                    $("#addClass").addClass("green")
+                });
+
+                $('.before').click(function(){
+                    $("#before").before("<h1>New Element!!!</h1>")
+                });
+
+                $('.after').click(function(){
+                    $("#after").after("<h1>New Element!!!</h1>")
+                });
+
+                $('.append').click(function(){
+                    $("#append").append("<p>I am a brand new p tag within the old element</p>")
+                });
+
+                $('.html').click(function(){
+                    $("#html").html("<h1>I am a brand new h1 element that will replace the old div element completely</h1>")
+                });
+
+                $('.attr').click(function(){
+                    var classVal = $('#attr').attr("class")
+                    $("#attr").append(classVal)
+                });
+
+                $('.attr2').click(function(){
+                    $("#attr").attr("class", "red")
+                });
+
+                $('.val').click(function(){
+                    console.log ($("#val").val())
+                });
+
+                $('.val2').click(function(){
+                    $("#val").val("New Value !!!")
+                });
+
+                $('.text').click(function(){
+                    $("#text").text("New text")
+                });
+                
+                var value1 = $("#data")
+                $.data(value1, "newvalue", "new value is me")
+                $('.data').click(function(){
+                    var value2 = $.data(value1, "newvalue")
+                    $("#data").after(value2)
+                });
+
+            });
+            </script>
+            <link rel="stylesheet" id="text/css" href="style.css">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Click</legend>
+            <p>Adds a function that occurs when an element is clicked. Click for an alert.</p>
+            <button class="click">Click this button to alert you.</button>
+        </fieldset>
+        <fieldset>
+            <legend>Hide</legend>
+            <p>Hides an element</p>
+            <button class="hide">Click to hide this button.</button>
+        </fieldset>
+        <fieldset>
+            <legend>Show</legend>
+            <p>Shows an element</p>
+            <button class="show">Click this button to show that disappeared button.</button>
+        </fieldset>
+        <fieldset>
+            <legend>Toggle</legend>
+            <p>Toggles between Hide and Show.</p>
+            <button class="toggle">Click this button to Toggle between Hide and Show of that button.</button>
+        </fieldset>
+        <fieldset>
+            <legend>slideDown</legend>
+            <p>Provides slide down animation when showing.</p>
+            <p class="hidden" hidden>This is what will Show when this button is clicked.</p>
+            <button class="slideDown">Click this button to show a slidedown hidden element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>slideUp</legend>
+            <p>Provides a slide up animation while hiding an element.</p>
+            <p id="slideUp">This is what will Show when this button is clicked.</p>
+            <button class="slideUp">Click this button to show a slideup hidden element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>slideToggle</legend>
+            <p>Toggles Between slideUp and slideDown.</p>
+            <p id="slideToggle">This is what will be toggled while using slideUp and slideDown.</p>
+            <button class="slideToggle">Click this button to toggle between slideDown and slideUp of an element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>fadeIn</legend>
+            <p>Provides a fade in animation when showing.</p>
+            <p id="fadeIn" hidden>This is what will fadeIn.</p>
+            <button class="fadeIn">Click this button to fadeIn an element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>fadeOut</legend>
+            <p>Provides a fade out animation when showing.</p>
+            <p id="fadeOut">This is what will fadeOut.</p>
+            <button class="fadeOut">Click this button to fadeOut an element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>addClass</legend>
+            <p>Adds a class to an element.</p>
+            <p id="addClass">This is what will have the class added to it.</p>
+            <button class="addClass">Click this button to addClass to an element</button>
+        </fieldset>
+        <fieldset>
+            <legend>before</legend>
+            <p>Adds an element before that entire element.</p>
+            <p id="before">An element will be added before (that) element.</p>
+            <button class="before">Click this Button to add new element before (that) selected element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>after</legend>
+            <p>Adds an element after that entire element.</p>
+            <p id="after">An element will be added after (that) element.</p>
+            <button class="after">Click this button to add a new element after (that) selected element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>append</legend>
+            <p>Adds an element after the last text/element within that selected element.</p>
+            <p id="append">An element will be added after the last text/element within (that) element (here).</p>
+            <button class="append">Click this button to add a new element after the last text/element within (that) selected element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>html</legend>
+            <p>Replaces the old element within an html with a new element.</p>
+            <div id="html">This is a div<p>I am a p tag within the (that) div.</p></div>
+            <button class="html">Click this button to completely replace (that) selected element with a new element.</button>
+        </fieldset>
+        <fieldset>
+            <legend>attr</legend>
+            <p>Retreive or set an attribute of an element</p>
+            <p class="green" id="attr">I am a p tag with the class of green. (that) Class=</p>
+            <button class="attr">Click this button to retreive class of (that) selected element.</button>
+            <button class="attr2">Click this button to change the class attribute to red.</button>
+        </fieldset>
+        <fieldset>
+            <legend>val</legend>
+            <p>Retreive or Set the value of an input</p>
+            <input type="text" name="name" id="val">
+            <button class="val">Click this button to retreive the value of (that) selected input. Look in your console</button>
+            <button class="val2">Click this button to set the value of (that) selected input to the New Value</button>
+        </fieldset>
+        <fieldset>
+            <legend>text</legend>
+            <p>Replace the text of an element.</p>
+            <p id="text">My text on (that) element will be replace with a new text.</p>
+            <button class="text">Click this button to replace the old text of (that) element with the new text.</button>
+        </fieldset>
+        <fieldset>
+            <legend>data</legend>
+            <p>Stores a data value in an element(Hidden in JavaScript).</p>
+            <p id="data">I have a value hidden in me. (that) What is the value?</p>
+            <button class="data">Click this button to retreive the value that is hidden within (that) selected element.</button>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+h1{
+  height: 40px;
+  width: 360px;
+  margin-left: 220px;
+  background-color: black;
+  color: yellowgreen;
+  border: solid purple 4px; 
+  border-radius: 10px;
+  text-align: center;
+}
+
+main{
+    height: 405px;
+    width: 800px;
+    border: solid purple 4px;
+    background-image: url(images/ninja2.jpeg);
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.sizing{
+    border: solid yellowgreen 2px;
+    height: 180px;
+    width: 180px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+button{
+    background-color: black;
+    color: yellow;
+    border: solid yellow 4px;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    margin-left: 380px;
+}

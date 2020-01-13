@@ -1,0 +1,45 @@
+*{
+    border: solid blue 4px;
+}
+
+body{
+    border: none;
+    padding-left: 275px; 
+}
+
+h1{
+    height: 40px;
+    width: 360px;
+    margin-left: 220px;
+    background-color: black;
+    color: yellowgreen;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div{
+    height: 405px;
+    width: 815px;
+    background-image: url(../img/images.png);
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+img{
+    height: 180px;
+    width: 180px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    margin: 10px 0px 0px 10px;
+}
+
+button{
+    background-color: black;
+    color: yellow;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    margin-left: 380px;
+}

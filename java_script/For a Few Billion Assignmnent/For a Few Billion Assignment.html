@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>For a Few Billion</title>
+        <script>
+            function fewBillion(){
+                var money = .01;
+                var days = 0;
+
+                for(var i = 0; i <= 10000; i++){
+                   if(money > 10000 && money < 11000){
+                       console.log(days)
+                   }else if(days === 30){
+                       console.log(money)
+                   }
+                   if(money === Infinity){
+                       console.log(days)
+                       break
+                   }
+                    money = money * 2;
+                    days++;      
+                }
+            }       
+            fewBillion()
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

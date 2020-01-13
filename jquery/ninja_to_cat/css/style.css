@@ -1,0 +1,27 @@
+div{
+    height: 835px;
+    width: 475px;
+    background: linear-gradient(purple, orange, red, blue, green);
+    border: solid aqua 6px;
+    border-radius: 10px;
+    padding: 10px 0px 0px 10px;
+}
+
+h1{
+    height: 40px;
+    width: 340px;
+    background: linear-gradient(purple, orange, red, blue, green);
+    color: aqua;
+    border: solid aqua 6px;
+    border-radius: 10px;
+    margin-left: 60px;
+}
+
+img{
+    height: 158px;
+    width: 460px;
+    border: solid aqua 2px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+}

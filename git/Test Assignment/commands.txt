@@ -1,0 +1,21 @@
+Command + Space Bar + typed terminal
+cd Desktop
+mkdir test
+cd test
+touch index.html
+touch style.css
+touch commands.txt
+cp index.html index_2.html
+rm style.css
+cd ..
+mkdir destination
+mv index_2.html ../index_2.html
+cd ..
+mv index_2.html destination/index_2.html
+cd test
+ls
+cd ..
+cd destination
+ls
+cd ..
+rm -rf destination

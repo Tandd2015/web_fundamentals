@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>While You Wait</title>
+        <script>
+            function MyBirthday(){
+                var daysUntilMyBirthday = 60;
+                
+                while(daysUntilMyBirthday > 0){
+                    if(daysUntilMyBirthday > 30){
+                        console.log(daysUntilMyBirthday, "days until my birthday. Its just to long!")
+                    }else if(daysUntilMyBirthday <= 30 && daysUntilMyBirthday > 5){
+                        console.log(daysUntilMyBirthday, "days until my birthday. Its coming around the mountain fast!" )
+                    }else if(daysUntilMyBirthday <= 5 && daysUntilMyBirthday !== 1){
+                        console.log(daysUntilMyBirthday, "days until my birthday. Scream it so loud the heavens will here it!!!!!")
+                    }else {
+                        console.log(` ♪ღ♪*•.¸¸¸.•*¨¨*•.¸¸¸.•*•♪ღ♪¸.•*¨¨*•.¸¸¸.•*•♪ღ♪•*
+♪ღ♪░H░A░P░P░Y░ B░I░R░T░H░D░A░Y░░♪ღ♪
+*•♪ღ♪*•.¸¸¸.•*¨¨*•.¸¸¸.•*•♪¸.•*¨¨*•.¸¸¸.•*•♪ღ♪•«`)
+                    }
+                    daysUntilMyBirthday--;
+                }    
+            }     
+            MyBirthday()
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

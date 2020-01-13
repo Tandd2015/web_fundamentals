@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Ninja Man Game" content="This is a Ninja Man Game based off the concept of pacman.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ninja Man Game</title>
+        <style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            #world {
+                line-height: 0px;
+                display: inline-block;
+            }
+            .row {
+                line-height: 0px;
+                display: inline-block;
+            }
+            .wall {
+                background-color: blue;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .blank_space {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .sushi {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                background-image: url('img/sushi.png');
+                background-size: contain;
+                display: inline-block;
+            }
+            .onigiri {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                background-image: url('img/onigiri.png');
+                background-size: contain;
+                display: inline-block;
+            }
+            #ninjaman {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/ninja.gif');
+                background-size: contain;
+                position: absolute;
+            }
+            #score{
+                border: 2px solid black;
+                padding: 10px;
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                color: black;
+                font-size: 25px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="world"></div>
+        <div id="ninjaman"></div>
+        <div id="score"></div>
+        <pre id="n_world"></pre>
+    </body>
+    <script type="text/javascript">
+
+        var score_board = 0;
+        
+        var game_count = 0;
+
+        var n = [];
+        
+        var new_world = [];
+        
+        var world_dict = {
+            0: 'wall',
+            1: 'blank_space',
+            2: 'sushi',
+            3: 'onigiri'
+        };
+        
+
+        var ninjaman = {
+            x:1,
+            y:1
+        };
+        
+        function maze(dimension_1, dimension_2){ // https://rosettacode.org/wiki/Maze_generation#JavaScript
+            var open_spaces = dimension_1 * dimension_2 - 1;
+            if (open_spaces < 0) {alert("illegal maze dimensions");return;}
+            var horizontal_array = []; for (var i = 0; i < dimension_1 + 1; i++) horizontal_array[i] = [],
+                vertical_array = []; for (var i = 0; i < dimension_1 + 1; i++) vertical_array[i] = [],
+                current_location = [Math.floor(Math.random() * dimension_1), Math.floor(Math.random() * dimension_2)],
+                visited_and_future_potential = [current_location],
+                unvisited_locations = [];
+            for (var i = 0; i < dimension_1 + 2; i++) {
+                unvisited_locations[i] = [];
+                for (var d = 0; d < dimension_2 + 1; d++)
+                    unvisited_locations[i].push(i > 0 && i < dimension_1 + 1 && d > 0 && (i != current_location[0] + 1 || d != current_location[1] + 1));
+            }
+            while (0 < open_spaces) {
+                var adjacent_locations_from_current = [[current_location[0] + 1, current_location[1]], [current_location[0], current_location[1] + 1],
+                    [current_location[0] - 1, current_location[1]], [current_location[0], current_location[1] - 1]];
+                var unvisted_adjacent_locations_from_current = [];
+                for (var i = 0; i < 4; i++)
+                    if (unvisited_locations[adjacent_locations_from_current[i][0] + 1][adjacent_locations_from_current[i][1] + 1])
+                        unvisted_adjacent_locations_from_current.push(adjacent_locations_from_current[i]);
+                if (unvisted_adjacent_locations_from_current.length) {
+                    open_spaces = open_spaces - 1;
+                    next_current_location = unvisted_adjacent_locations_from_current[Math.floor(Math.random() * unvisted_adjacent_locations_from_current.length)];
+                    unvisited_locations[next_current_location[0] + 1][next_current_location[1] + 1] = false;
+                    if (next_current_location[0] == current_location[0])
+                        horizontal_array[next_current_location[0]][(next_current_location[1] + current_location[1] - 1) / 2] = true;
+                    else
+                        vertical_array[(next_current_location[0] + current_location[0] -1 ) / 2][next_current_location[1]] = true;
+                    visited_and_future_potential.push(current_location = next_current_location);
+                } else
+                    current_location = visited_and_future_potential.pop();
+            }
+            return {dimension_1: dimension_1, dimension_2: dimension_2, horizontal_array: horizontal_array, vertical_array: vertical_array};
+        }
+
+        function display_world(m){ // https://rosettacode.org/wiki/Maze_generation#JavaScript
+            for (var row = 0; row < m.dimension_1 * 2 + 1; row++) {
+                var row_characters = [];
+                if (0 == row % 2)
+                    for (var items = 0; items < m.dimension_2 * 4 + 1; items++)
+                        if (0 == items % 4)
+                            row_characters[items] = 0;
+                        else
+                            if (row > 0 && m.vertical_array[row / 2 - 1][Math.floor(items / 4)])
+                                row_characters[items] = Math.floor((Math.random() * 3)+1);
+                            else
+                                row_characters[items] = 0;
+                else
+                    for (var items = 0; items < m.dimension_2 * 4 + 1; items++)
+                        if (0 == items % 4)
+                            if (items > 0 && m.horizontal_array[(row - 1) / 2][items / 4 - 1])
+                                row_characters[items] = Math.floor((Math.random() * 3)+1);
+                            else
+                                row_characters[items] = 0;
+                        else
+                            row_characters[items] = Math.floor((Math.random() * 3)+1);
+                if (0 == row || 10 == row) {
+                    row_characters[9] = 1;
+                };
+                if (m.dimension_1 * 2 - 5 == row) row_characters[m.dimension_2 - 5] = row_characters[4 * m.dimension_2] = 1;
+                new_world.push(row_characters.join('') + '\r\n');
+            };
+            for(var row=0; row<new_world.length; row++) {
+                n.push([]);
+                for(var items=0; items<new_world[row].length; items++) {
+                    if (items < 21){
+                        n[row].push(Number(new_world[row][items]));
+                    };
+                };
+            };
+            return n;
+        };
+        display_world(maze(5, 5));
+
+        function draw_world(){
+            var new_worlds = "";
+            for(var row=0; row<n.length; row++){
+                new_worlds += "<div class ='row'>";     
+                for(var item=0; item<n[row].length; item++){
+                    (new_worlds += "<div class='"+world_dict[n[row][item]]
+                        +"'></div>");
+                };
+                new_worlds += "</div>";
+            };
+            document.getElementById('world').innerHTML = new_worlds;
+        };
+        draw_world();
+
+        function draw_ninja_man(){
+            (document.getElementById('ninjaman').style.top = ninjaman.y
+                * 40 + 'px');
+            (document.getElementById('ninjaman').style.left = ninjaman.x
+                * 40 + 'px'); 
+        };
+        draw_ninja_man();
+
+        function draw_score_board(){
+            document.getElementById('score').innerHTML = score_board;
+        };
+        draw_score_board();
+        
+        document.onkeydown = function(move){
+            if (move.keyCode == 37){ 
+                if(n[ninjaman.y][ninjaman.x - 1] != 0){
+                    ninjaman.x--; 
+                }
+            } //left
+            else if (move.keyCode == 39){ 
+                if (n[ninjaman.y][ninjaman.x + 1] != 0){
+                    ninjaman.x++;
+                }
+            } //right
+            else if (move.keyCode == 40){ 
+                if (n[ninjaman.y + 1][ninjaman.x] != 0){
+                   ninjaman.y++;
+                }
+            } //top
+            else if (move.keyCode == 38){ 
+                if (n[ninjaman.y - 1][ninjaman.x] != 0){
+                   ninjaman.y--;
+                }
+            } //down
+            if(n[ninjaman.y][ninjaman.x] === 2){
+            score_board += 10;
+            }
+            if(n[ninjaman.y][ninjaman.x] === 3){
+            score_board += 5;
+            }
+            n[ninjaman.y][ninjaman.x] = 1;
+            draw_ninja_man()
+            draw_world()
+            draw_score_board()
+        };
+    </script>
+</html>

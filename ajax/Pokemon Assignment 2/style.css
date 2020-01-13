@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient(to top, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid black 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 1165px;
+    border-radius: 5px;
+    padding-left: 13px;
+    padding-top: 13px;
+    background-size: cover;
+}
+
+.pokedex{
+    background: linear-gradient(to left, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid yellowgreen 5px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    width: 240px;
+    margin-left: 425px;
+    text-align: center;
+}
+
+.pokeball_backpack{
+    background: linear-gradient(to right, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid turquoise 8px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    width: 747px;
+    padding-left: 13px;
+    padding-top: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+}
+
+.pokeball{
+    background: linear-gradient(to left, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid navy 5px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    width: 80px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.pokeball1{
+    background: linear-gradient(to left, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid navy 5px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    width: 80px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.pokemon_index_reader{
+    background: linear-gradient(to bottom, blue ,yellow ,red ,purple ,green ,orange);
+    border: solid gold 8px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 4px;
+    height: 500px;
+    width: 310px;
+    padding-left: 33px;
+    padding-top: 13px;
+    margin-left: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px; 
+}
+
+h1{
+   margin-bottom: 20px;
+}
+
+h4.spacing{
+    margin-bottom: 15px;
+}
+
+h4.spacing1{
+    margin-bottom: 40px;
+}
+
+ul{
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+li{
+    margin-left: 15px;
+}

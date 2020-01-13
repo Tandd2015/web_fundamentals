@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your very own weather forecast app assignment</title>
+        <meta charset="UTF-8">
+        <meta name="Your very own weather forecast app assignment" content="This is an assignment for the Coding Dojo using AJAX and jQuery along with a weather api to make our own weather forecast app">
+        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet" id="text/css" href="style.css">
+        <script>
+            $(document).ready(function(){
+                var load_page = `
+                                    <div id="weather_information">
+                                        <form>
+                                            <label for="user_city">City:
+                                                <input type="text" name="user_city" id="user_city">
+                                            </label>
+                                            <button type="submit" name="submit_me" id="submit_me">Click to submit</button>
+                                        </form>
+                                        <div id="the_anwser"></div>
+                                    </div>
+                                `    
+                
+                $('body').html(load_page);
+                $(document).on('click', 'button', function(){
+                    $('form').submit(function(){
+                        var city_name = $('input#user_city').val()
+                        var api_key = '6553cefecbe0a16f9dc5abba3b3644a3'
+                        $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=imperial&appid=${api_key}`, function(response){
+                            console.log(response);
+                            var load_response = '';
+                            load_response += `<p>${response['name']}: ${response['weather'][0]['description']}</p>`;
+                            load_response += `<p>Temperature: ${response['main']['temp']}</p>`;
+                            load_response += `<p>Coordinates: lon:${response['coord'].lon}, lat:${response['coord'].lat}</p>`;
+                            $('#the_anwser').html(load_response);
+                        }, 'json');
+
+                    return false;
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+       
+    </body>
+</html>

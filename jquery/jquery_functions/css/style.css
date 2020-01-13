@@ -1,0 +1,19 @@
+div {
+    text-align: center;
+    border-bottom:  5px solid black;
+}
+
+button{
+    margin-right: 700px;
+    background-color: greenyellow;
+    display: inline-block;
+    padding: 10px;
+}
+
+.xtremgreen{
+    color: chartreuse;
+}
+
+.blue{
+    color: blue;
+}

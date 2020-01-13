@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ninja to Cat Assignment</title>
+        <meta charset="UTF-8">
+        <meta name="Ninja to Cat Assignment" content="This is a Jquery assignment using different pictures that create a ninja to cat puzzle for the Coding Dojo.">
+        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet" id="text/css" href="style.css">
+        <script>
+            $(document).ready(function(){
+                $('img.ninja').click(function(){
+                    $(this).attr('temp', $(this).attr('src'))
+                    $(this).attr('src', $(this).attr('alt-src'))
+                    $(this).attr('alt-src', $(this).attr('temp'))
+                });    
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Ninja to Cat Assignment</h1>
+        <main>
+            <img class="ninja" src="images/ninja0.png" alt-src='images/cat0.png' temp="" alt="Picture 1 of 5 of total image of a ninja.">
+            <img class="ninja" src="images/ninja1.png" alt-src='images/cat1.png' temp="" alt="Picture 2 of 5 of total image of a ninja.">
+            <img class="ninja" src="images/ninja2.png" alt-src='images/cat2.png' temp="" alt="Picture 3 of 5 of total image of a ninja.">
+            <img class="ninja" src="images/ninja3.png" alt-src='images/cat3.png' temp="" alt="Picture 4 of 5 of total image of a ninja.">
+            <img class="ninja" src="images/ninja4.png" alt-src='images/cat4.png' temp="" alt="Picture 5 of 5 of total image of a ninja.">
+        </main>
+    </body>
+</html>

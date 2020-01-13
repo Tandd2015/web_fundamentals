@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fancy Array</title>
+        <script>
+            function fancyArray(arr, symbol, reversed){
+                var count = 0;
+
+                if(symbol == undefined){
+                    symbol = " -> "; 
+                }
+                if(reversed){
+                   for (var i = arr.length - 1; i >= 0; i--){
+                       console.log(count + symbol + arr[idx]);
+                   }
+                }else{
+                    for (var idx = 0; idx < arr.length; idx++){
+                        if(arr[idx] == arr[idx]){
+                            console.log(count + symbol + arr[idx]);
+                            count++;
+                        }
+                    }
+                }
+            }
+            fancyArray(["James", "Jill", "Jane", "Jack"]);
+
+            function fancyPrint(arr, symbol, reversed){
+                if(symbol == undefined){
+                    symbol = "->";
+                }
+                if(reversed){
+                    for (var i = things.length - 1; i >= 0; i--){
+                        console.log(`${i} ${symbol} ${arr[i]}`);
+                    }
+                }else{
+                    for (var i = 0; i < arr.length; i++){
+                        console.log(`${i} ${symbol} ${arr[i]}`);
+                    }
+                }
+            }
+            fancyPrint(["James", "Jill", "Jane", "Jack"]);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Random Chance (Slots) Assignment</title>
+        <script>
+           function randomChance(quarters, goal){
+               var win = Math.trunc(Math.random() * 100);
+               
+                for (var game = quarters; game > 0; game--){
+                    if(win === 1){
+                        var winnings = Math.trunc(Math.random() * 50 + 50); 
+                        if(quarters + winnings > goal){
+                            return (quarters + winnings);
+                        }else{
+                            quarters += winnings;
+                            console.log("winner", quarters);
+                        }
+                    }else{ (game === 0);
+                        console.log("loser");
+                        return (0);
+                    }
+                }
+           } 
+           randomChance(Math.floor(Math.random() * (100 - 50) + 50), (200));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

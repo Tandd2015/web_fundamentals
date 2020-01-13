@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Ninja Game 1" content="The first part of the Ninja Game.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ninja Game 1</title>
+    </head>
+    <body>
+        <div id='background'>
+            <div id='shinoby' style='position:absolute; top:100px; left:450px; background-image: url("img/down1.png"); width:59px; height:86px;'></div>
+        </div>
+        <script type="text/javascript">
+            var left_0 = 450, top_0 = 100;
+
+            function ninja_mover(){
+                document.getElementById('shinoby').style.left = left_0+'px';
+                document.getElementById('shinoby').style.top = top_0+'px';
+            }
+            document.onkeydown = function(step){
+                // console.log(step);
+                if (step.keyCode == 38 && top_0 < 500){
+                    top_0 += 10; // Top
+                }
+                else if (step.keyCode == 40 && top_0 > 0){
+                    top_0 -= 9; // Bottom
+                }
+                else if (step.keyCode == 37 && left_0 > 0){
+                    left_0 -= 9; // Left
+                }
+                else if (step.keyCode == 39 && left_0 < 500){
+                    left_0 += 9; // Right
+                }
+                else{
+                    left_0 = left_0;
+                    top_0 = top_0;
+                }
+                ninja_mover()
+            }
+        </script>
+    </body>
+</html>

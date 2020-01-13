@@ -1,0 +1,196 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: serif /* or sans-serif */ 
+}
+
+div.wrapper{
+    height: 1200px;
+    width: 1000px;
+    padding: 0px 10px 0px 10px;
+    background-color: #171717;
+}
+    div.wrapper div.top{
+        background-color: #1b1b1b;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    div.wrapper div.top img{
+        padding: 20px;
+        margin-right: 545px;
+    }
+
+        div.wrapper div.top p{
+            color: #cfcfcf;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+            font-weight: bolder;
+            margin-top: 30px;
+        }
+    div.wrapper ul{
+        display: inline-block;
+        list-style: none;
+        width: 1000px;
+        height: 40px;
+        background: linear-gradient(#545454, #464646,#2b2b2b);
+    }
+
+        div.wrapper ul li{
+            display: inline-block;
+            vertical-align: top;
+            height: 10px;
+            padding: 10px 15px 20px 15px;
+            margin-left: 5px;
+        }
+
+        div.wrapper ul li p{
+            color: #cfcfcf;
+            display: inline;
+            vertical-align: center;
+            font-size: 8px;
+            font-weight: bolder;
+            padding-left: 5px;
+        }
+
+        div.wrapper ul li a{
+            color: #cfcfcf;
+            text-decoration-line: none;
+        }
+
+        div.wrapper ul li.space{
+            display: inline-block;
+            height: 30px;
+            padding: 3px;
+            font-weight: lighter;
+            color: #cfcfcf;
+        }
+
+        div.wrapper ul li.space p, div.wrapper ul li.space_1 p{
+            font-size: 30px;
+            vertical-align: middle;
+        }
+
+        div.wrapper ul li.space_1{
+            display: inline-block;
+            height: 30px;
+            padding: 3px;
+            font-weight: lighter;
+            color: #cfcfcf;
+            margin-left: 225px;
+        }
+    div.wrapper img.main{
+        width: 1000px;
+    }
+
+    div.wrapper div.middle{
+        width: 1000px;
+    }
+
+        div.wrapper div.middle div.section{
+            width: 197px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 25px;
+            background-color: #1b1b1b;
+        }
+
+        div.wrapper div.middle div.section img{
+            vertical-align: middle;
+        }
+
+        div.wrapper div.middle div.section h3{
+            display: inline-block;
+            vertical-align: top;
+            color: #f0883a;
+            padding-top: 10px;
+            font-size: 19PX;
+        }
+
+        div.wrapper div.middle div.section p{
+            display: inline-block;
+            vertical-align: top;
+            color: #cfcfcf;
+            width: 148px;
+            font-size: 13px;
+            margin-left: 50px;
+        }
+
+        div.wrapper div.middle form{
+            background-color: black;
+            color: #cfcfcf;
+            padding: 25px;
+        }
+
+        div.wrapper div.middle form h2{
+            display: inline-table;
+            width: 641px;
+            font-size: 29px;
+        }
+
+        div.wrapper div.middle form p{
+            display: inline-table;
+            width: 664px;
+        }
+
+        div.wrapper div.middle form button{
+            background-color: #f0883a;
+            background: linear-gradient(#f6b687,#ef7e2d, #df7829);
+            color: white;
+            padding: 12px 35px 12px 35px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            margin-left: 140px;
+            display: inline-table;
+            margin-bottom: 25px;
+        }
+
+    div.wrapper div.bottom{
+        background-color: #1b1b1b;
+        width: 1000px;
+        text-align: center;
+    }
+
+        div.wrapper div.bottom h3{
+            display: inline-block;
+            margin-right: 762px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        div.wrapper div.bottom a{
+            display: inline-block;
+            color: #f0883a;
+            text-decoration-line: none;
+            margin-bottom: 20px;
+        }
+        div.wrapper div.bottom div.section_2{
+            width: 247px;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 10px;
+        }
+
+        div.wrapper div.bottom div.section_2 img{
+            display: inline-block;
+            border: 4px solid grey;
+            margin-bottom: 10px;
+        }
+        div.wrapper div.bottom div.section_2 h5{
+            color: #f0883a;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        div.wrapper div.bottom div.section_2 p{
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        div.wrapper div.bottom a.o{
+            margin-left: 927px;
+            color: grey;
+            font-size: 13px;
+            padding-top: 15px;
+        }

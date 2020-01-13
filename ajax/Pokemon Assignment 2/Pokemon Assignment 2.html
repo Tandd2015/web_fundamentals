@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pokemon Assignment 2</title>
+        <meta charset="UTF-8">
+        <meta name="Pokemon Assignment 2" content="This is a Coding Dojo Assignment using Jquery and Ajax with an API to make a list of the first 151 pokemon images.">
+        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet" id="text/css" href="style.css">
+        <script>
+            $(document).ready(function(){
+
+                for(var i = 1;  i < 803; i++){ 
+                    var base_pic_url_str = `
+                                            <img class="pokeball" id="${i}" alt="A picture of a pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png">
+                                        `
+                    $('div.pokeball_backpack').append(base_pic_url_str);
+                }; // end of foor loop 
+                
+                $(document).on('click', 'img', function(i_pick_u){
+                    var id = this.id;
+                    $.get("http://pokeapi.salestock.net/api/v2/pokemon/" + id, function(catchem_all){
+                        var pokedex_str = "";
+                        pokedex_str += "<h1>" + catchem_all['name'] +"</h1>";
+                        pokedex_str += `<img class="pokeball" id="${id}" alt="A picture of a pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">`
+                        pokedex_str += `<h4 class="spacing">Types</h4>`;
+                        pokedex_str += "<ul>";
+                        for (var p = 0; p < catchem_all['types'].length; p++) {
+                            pokedex_str += "<li>" + catchem_all['types'][`${p}`]['type']['name'] + "</li>";
+                        }
+                        pokedex_str += "</ul>"
+                        pokedex_str += `<h4 class="spacing1">Height: ` + catchem_all['height'] +"</h4>";
+                        pokedex_str += `<h4 class="spacing1">Weight: ` + catchem_all['weight'] +"</h4>";
+                        $('h4').addClass('spacing')
+                        $('div.pokemon_index_reader').html(pokedex_str);
+                        $('html, body').animate({scrollTop: 0}, 600);
+                    }, "json") // end of get catchem_all function
+                });
+                                    
+            }); // end of document ready function
+        </script>
+    </head>
+    <body>
+        <h1 class="pokedex">Pokedex</h1>
+        <div class="pokeball_backpack"></div>
+        <div class="pokemon_index_reader"></div>
+    </body>
+</html>

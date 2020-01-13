@@ -1,0 +1,30 @@
+h1{
+    border-bottom: solid black 1px;
+    width: 300px;
+}
+
+.appendable_table{
+    width: fit-content;
+    height: fit-content;
+    border: solid black 1px;
+}
+
+    .appendable_table tr{
+        display: inline-block;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+
+.input_center{
+    list-style-type: none;
+    display: inline-block;
+    text-align-last: right;
+    vertical-align: top;
+}
+
+#submit{
+    display: inline-block;
+    margin-left: 220px;
+}
+

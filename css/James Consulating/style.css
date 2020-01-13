@@ -1,0 +1,266 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper{
+    height: 960px;
+    width: 888px;
+    background-color: #062234;
+    display: inline-block;
+    padding-left: 12px;
+}
+
+header{
+    height: 70px;
+    width: 900px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hh1{
+    height: 46px;
+    width: 365px;
+    display: inline-block;
+    vertical-align: top;
+    color: whitesmoke;
+    padding-left: 25px;
+    padding-top: 24px;
+    font-size: 22px;
+}
+
+.button_bar{
+    height: 35px; 
+    width: 505px;
+    padding-top: 35px;  
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.button1{
+    display: inline-block;
+    vertical-align: top;
+    height: 52px;
+    width: 77px;
+    color: white;
+    font-size: 14px;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.blue{
+    color: #1a94e1;
+}
+
+.white{
+    color: white;
+}
+
+main{
+    height: 610px;
+    width: 862px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: whitesmoke;
+    padding-left: 18px;
+    padding-top: 18px;
+}
+
+footer{
+    height: 220px;
+    width: 880px;
+}
+
+#bigimg{
+    height: 360px;
+    width: 845px;
+}
+
+.box{
+    height: 205px;
+    width: 270px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #1568a8;
+    margin-right: 14px;
+    margin-top: 14px;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+.box1{
+    height: 43px;
+    width: 260px;
+    color: whitesmoke;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+.white1{
+    color: white;
+    font-size: 11px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.button_holder1{
+    height: 53px;
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 42px;
+    padding-left: 18px;
+}
+
+.button_holder2{
+    height: 53px;
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
+.more_info{
+    height: 36px;
+    width: 125px;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, #4eb0ed 18px, #1893de 18px);
+}
+
+.hholder{
+    height: 35px;
+    width: 880px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.holder{
+    height: 35px;
+    width: 420px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 18px;
+}
+
+.holder1{
+    height: 35px;
+    width: 288px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 150px;
+}
+
+.final_box{
+    height: 170px;
+    width: 865px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.building{
+    height: 145px;
+    width: 270px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+.final{
+    height: 145px;
+    width: 270px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    margin-right: 15px;
+}
+
+.final1{
+    height: 90px;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #daedff;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.fin{
+    color: #576a76;
+    font-size: 11px;
+}
+
+.button_holder3{
+    height: 16px;
+    width: 270px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 39px;
+}
+
+.learn_more{
+    height: 16px;
+    width: 95px;
+    display: inline-block;
+    background-color: white;
+    color: #576a76;
+    padding-right: 30px;
+    border-style: none;
+
+}  
+
+.f1{
+    color: #3e5769;
+    font-size: 13px;
+} 
+
+.six{
+    margin-top: 65px;
+    color: #435765;
+}
+
+.bottom_bar{
+    height: 33px;
+    width: 595px;
+    background-color: #daedff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    padding-left: 285px;
+    padding-top: 15px;
+}
+
+.button2{
+    height: 48px;
+    width: 39px;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    font-size: 9px;
+    padding-left: 12px;
+}
+
+.lb{
+    color: #a3cef0;
+}
+
+.db{
+    color: #4f82a8;
+}

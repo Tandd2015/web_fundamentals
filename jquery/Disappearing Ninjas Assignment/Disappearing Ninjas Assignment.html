@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Disappearing Ninjas Assignment</title>
+        <meta charset="UTF-8">
+        <meta name="Disappearing Ninjas Assignment" content="This is an Jquery assignement for the Coding Dojo where the goal is to make the ninjas disappear.">
+        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet"  id="text/css" href="style.css">
+        <script>
+            $(document).ready(function(){
+
+                $('img.sizing').click(function(){
+                    $(this).hide()
+                });
+
+                $('button').click(function(){
+                    $(".sizing").show()
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Jquery Assignment 1</h1>
+        <main>
+            <img class="sizing" src="images/ninjarw1.jpeg" alt="A picture of the infero armor from Ronin Warriors.">
+            <img class="sizing" src="images/ninjarr1.jpeg" alt="A picture of the red armor from Ronin Warriors.">
+            <img class="sizing" src="images/ninjarr.jpeg" alt="A different picture of the red armor from Ronin Warriors.">
+            <img class="sizing" src="images/ninjarw.jpeg" alt="A different picture of the inferno armor from Ronin Warriors.">
+            <img class="sizing" src="images/ninja.jpeg" alt="A picture of a ninja with chain weapons twirling around him.">
+            <img class="sizing" src="images/ninjar.jpeg" alt="A picture of a ninja with red and grey armor.">
+            <img class="sizing" src="images/ninjar1.jpeg" alt="A picture of a ninja with red armor.">
+            <img class="sizing" src="images/ninja1.jpeg" alt="A picture of a ninja standing with a chain weapon in hand.">
+        </main>
+        <button>Restore</button>
+    </body>
+</html>

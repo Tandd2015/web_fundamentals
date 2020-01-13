@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pokemon Assignment</title>
+        <meta charset="UTF-8">
+        <meta name="Pokemon Assignment" content="This is a Coding Dojo Assignment using Jquery and Ajax with an API to make a list of the first 151 pokemon images.">
+        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet" id="text/css" href="style.css">
+        <script>
+            $(document).ready(function(){
+                
+                for(var i = 1; i < 152; i++) {
+                    new_string = `
+                                    <img class="pokemon_pic_holder" alt="A picture of a pokemon" id="${i}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png">
+                                `
+                    $('main').append(new_string)        
+                }  // end of foor loop
+                $(document).on('click', 'img', function(){ 
+                    $(this).fadeOut();
+                    alert("One slipped Out");
+                });  // end of document on function         
+            }); // end of document ready function
+        </script>
+    </head>
+    <body>
+        <h1>I only caught 151 of them !!!</h1>
+        <main>
+
+        </main>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Print Range Assignment</title>
+        <script>
+            function printRange(startPiont, endPiont, skipAmount){
+                if(!endPiont){
+                    endPiont = startPiont;
+                    startPiont = 0;
+                }
+                if(!skipAmount){
+                    skipAmount = 1;
+                }
+                for (var i = startPiont; i < endPiont; i += skipAmount){
+                    console.log(i);
+                }
+            }
+            printRange(2, 10, 2)
+            printRange(4, 8)
+            printRange(4)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

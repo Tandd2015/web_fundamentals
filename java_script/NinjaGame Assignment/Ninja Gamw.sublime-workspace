@@ -1,0 +1,256 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<html>\n\t<body>\n\t\t<div id='background'>\n\t\t\t<div id='character' style='position:absolute; top:100px; left:450px; background-image: url(\"img/down1.png\"); width:59px; height:86px;'></div>\n\t\t</div>\n\t\t<script type=\"text/javascript\">\n\t\t\tvar leftValue = 450, topValue = 100, direction = 'down', step = 1;\n\t\t\t\n\t\t\tfunction update() {\n\t\t\t\tif(step == 1) {\n\t\t\t\tstep = 2;\n\t\t\t\t}\t\n\t\t\t\telse {\n\t\t\t\t\tstep = 1;\n\t\t\t\t}\n\t\t\t\tdocument.getElementById(\"character\").style.left = leftValue+\"px\";\n\t\t\t\tdocument.getElementById(\"character\").style.top = topValue+\"px\";\n\t\t\t\tdocument.getElementById(\"character\").style.backgroundImage = \"url('img/\"+direction+step+\".png')\";\n\t\t\t}\n\t\t\tdocument.onkeydown = function(e){\n\t\t\t\tconsole.log('e: ', e);\n\t\t\t\tconsole.log('e.keyCode: ', e.keyCode);\n\t\t\t\tif (e.keyCode == 37 && leftValue > 0) { // LEFT\n\t\t\t\t\tleftValue = leftValue - 10;\n\t\t\t\t\tdirection = 'left';\n\t\t\t\t}\n\t\t\t\telse if (e.keyCode == 39 && leftValue < 500) { // RIGHT\n\t\t\t\t\tleftValue = leftValue + 10;\n\t\t\t\t\tdirection = 'right';\n\t\t\t\t}\n\t\t\t\telse if (e.keyCode == 40 && topValue < 500) { // DOWN\n\t\t\t\t\ttopValue = topValue + 10;\n\t\t\t\t\tdirection = 'down';\n\t\t\t\t}\n\t\t\t\telse if (e.keyCode == 38 && topValue > 0) { // UP\n\t\t\t\t\ttopValue = topValue - 10;\n\t\t\t\t\tdirection = 'top';\n\t\t\t\t}\n\n\t\t\t\tupdate();\n\t\t\t}\n\t\t</script>\n\t</body>\t\n</html>\n",
+			"file": "index.html",
+			"file_size": 1319,
+			"file_write_time": 131640743068885305,
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index4.html",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame"
+	],
+	"file_history":
+	[
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/practice.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/index4.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/index.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/index2.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/index3.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/index1.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/NinjaGame/onkeydown.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/Daniels Ninja Game/index.html",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/Sublime/Daniels Ninja Game/Daniels Ninja Game",
+		"/C/Users/Daniel/Desktop/daniel/Schooling/sample.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1275,
+								1275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 61.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index4.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1275,
+								1275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Ninja Gamw.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

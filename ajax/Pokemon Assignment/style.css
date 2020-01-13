@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding-left: 25px;
+}
+
+main{
+    width: 870px;
+    display: inline-block;
+    border: solid indigo 6px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: black;
+
+}
+
+h1{
+    display: inline-block;
+    color: yellow;
+    border: solid blue 6px;
+    background-color: black;
+    margin-left: 280px;
+}
+
+.pokemon_pic_holder{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-size: cover;
+    border: solid yellowgreen 2px;
+}

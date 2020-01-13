@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 900px;
+    width: 950px;
+    background-color: white;
+    display: inline-block;
+    padding-left: 23px;
+}
+
+#wrapper{
+    height: 880px; width: 930px;
+    background-color: rgb(180, 180, 161);
+    display: inline-block;
+}
+
+header{
+    height: 100px;
+    width: 805px;
+    display: inline-block;
+    padding-left: 75px;
+}
+
+.iholder1{
+    height: 100px;
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left{
+    height: 50px;
+    width: 100px;
+    padding-left: 130px;
+    padding-right: 0px;
+    padding-top: 50px;
+    
+}
+
+h1{
+    height: 30px;
+    width: 265px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 70px;
+
+}
+
+.iholder2{
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 50px;
+}
+
+#right{
+    height: 50px;
+    width: 100px;
+    background-color: white;
+}
+
+.irowholder1{
+    height: 780px;
+    width: 168px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 23px;
+    padding-top: 15px;
+    margin-right: 4px;
+}
+
+.iholdera{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(110, 154, 248);
+    display: inline-block;
+    outline-color: black;
+    outline-width: 2px;
+    padding-left: 18px;
+    padding-top: 18px;
+    margin-bottom: 10px;
+}
+
+.one{
+    height: 130px;
+    width: 130px;
+    background-color: white;
+}
+
+.irowholder{
+    height: 780px;
+    width: 168px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 2px;
+    padding-top: 15px;
+    margin-right: 4px;
+}
+
+.three{
+    height: 130px;
+    width: 130px;
+    background-color: white;
+}
+
+.five{
+    height: 130px;
+    width: 130px;
+    background-color: white;
+}
+
+.iholderb{
+    height: 150px;
+    width: 150px;
+    background-color: palevioletred;
+    display: inline-block;
+    outline-color: black;
+    outline-width: 2px;
+    padding-left: 18px;
+    padding-top: 18px;
+    margin-bottom: 10px;
+}
+
+.two{
+    height: 130px;
+    width: 130px;
+}
+
+.four{
+    height: 130px;
+    width: 130px;
+}
+
