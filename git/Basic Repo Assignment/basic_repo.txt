@@ -1,0 +1,58 @@
+touchCommand + Space
+Typed Terminal
+Pressed Return Key
+
+pwd
+ls
+cd Desktop
+touch basic_repo.txt
+
+mkdir basic_repo
+cd basic_repo
+git init
+touch index.html
+touch style.css
+touch readme.md
+touch aboutMe.txt
+vi aboutMe.txt
+
+(Name: Daniel Beatty
+Project Goal: Master Git!
+Favorite TV Show: Angel
+Favorite Quote:
+"Strength comes from struggle. When you learn to see your struggles as opportunities to become stronger, better, wiser, then your thinking shifts from 'I can't do this' to 'I must do this."
+~ Toni Sorenson
+Favorite Movie: The last samurai)
+Escape Button
+Shift + ;
+:wq
+
+vi readme.md
+
+(This is another git to GitHub assignment to practice newly learned skills for the advance git section of the online learning platform for Coding Dojo.)
+Escape Button
+Shift + ;
+:wq
+
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/Tandd2015/basic_repo.git
+git push -u origin master
+vi aboutMe.txt
+
+(Favorite Book: The brethren by John Grisham
+Favorite Color: Baby Blue
+Favorite Video Game: Assassins Creed (all of them)) // ADDED to the original
+Escape Button
+Shift + ;
+:wq
+
+(I manually put the index.html file into vs and put a generic html layout on it by entering a ! and pressing enter. Then I saved and quit vs.)
+
+git add .
+git commit -m "ADDED Favorite: Book, Color, and Video Game sections to aboutMe.txt & index.html is now a generic html layout from VS"
+git push -u origin master
+
+
+ 
+

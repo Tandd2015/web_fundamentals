@@ -1,0 +1,28 @@
+touchCommand + Space
+Typed Terminal
+Pressed Return Key
+
+pwd
+ls
+cd Desktop
+mkdir GitHubRepoAssignment
+cd GitHubRepoAssignment
+git init
+touch readme.md
+vi readme.md
+
+(This is just an upload for practice from git to GitHub for an assignment for Coding Dojo called GitHub Repo Assignment.)
+Escape Button
+Shift + ;
+:wq
+
+git status
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/Tandd2015/GitHubRepoAssignment.git
+git push -u origin master
+
+
+
+
+

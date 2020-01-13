@@ -1,0 +1,66 @@
+Command + Space
+Typed Terminal
+Pressed Return Key
+
+pwd
+ls
+cd Desktop
+mkdir gittest
+cd gittest
+git init
+touch index.html
+touch style.css
+touch aboutMe.txt
+git add .
+git commit -m "initial commit"
+vi aboutMe.txt
+
+(Name: Daniel Beatty
+Project Goal: Master Git!
+Favorite TV Show: Angel
+Favorite Quote:
+"Strength comes from struggle. When you learn to see your struggles as opportunities to become stronger, better, wiser, then your thinking shifts from 'I can't do this' to 'I must do this."
+~ Toni Sorenson)
+Escape Button
+Shift + ;
+:wq
+
+git add .
+git commit -m "updated aboutMe"
+vi aboutMe.txt
+
+(Name: Daniel Beatty
+Project Goal: Master Git!
+Favorite TV Show: Angel
+Favorite Quote:
+"Strength comes from struggle. When you learn to see your struggles as opportunities to become stronger, better, wiser, then your thinking shifts from 'I can't do this' to 'I must do this."
+~ Toni Sorenson
+Favorite Movie: The last samurai)
+Escape Button
+Shift + ;
+:wq
+
+git add .
+git commit -m "added favorite movie to aboutMe"
+git log
+git revert -n be438bd
+vi aboutMe.txt
+
+(Name: Daniel Beatty
+Project Goal: Master Git!
+Favorite TV Show: Angel
+Favorite Quote:
+"Strength comes from struggle. When you learn to see your struggles as opportunities to become stronger, better, wiser, then your thinking shifts from 'I can't do this' to 'I must do this."
+~ Toni Sorenson
+Favorite Book: The Brethren by John Grisham)
+Escape Button
+Shift + ;
+:wq
+
+git revert --continue
+git add .
+git commit -m "deleted my favorite movie section to add on my favorite book section"
+
+
+
+
